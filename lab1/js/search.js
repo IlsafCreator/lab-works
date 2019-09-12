@@ -19,4 +19,10 @@ function searching(){
   }
 }
 
+document.querySelector('#searchField').addEventListener('keydown',function(event){
+  if (event.keyCode === 13) {
+    searching();
+  }
+})
+
 document.getElementById('searchButton').onclick=searching;
