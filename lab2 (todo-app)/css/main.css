@@ -30,7 +30,7 @@ input {
 #container-to-do{
 	margin: 15px 0;
 }
-.labeled{
+.completed{
 	text-decoration:line-through;
 }
 .icon{
