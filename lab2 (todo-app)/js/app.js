@@ -1,4 +1,3 @@
-
 window.onload = function () {
   var btn = document.getElementById('button');
   var txtArea = document.getElementById('textarea');
@@ -28,19 +27,14 @@ window.onload = function () {
 
     txtArea.value = "";
 
-    // register events here:
-
-    // complete task
-    // TODO: labeled - not valid name for CSS and context
-  
+    //mark task as completed
     check.onclick = function () {
-      label.classList.toggle('labeled');
+      label.classList.toggle('completed');
     };
-    
-    // TODO: delete task event
-    icon.onclick = function () {
-      
-      //console.log('delete');
+
+    //delete task
+    icon.onclick = function (event) {
+      event.currentTarget.parentElement.remove();
     };
 
   }
@@ -109,7 +103,7 @@ window.onload = function () {
 //     });
 
 //     function labeledTask() {
-//       label.toggleClass('labeled');
+//       label.toggleClass('completed');
 //     }
 //   }
 // });
