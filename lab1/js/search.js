@@ -8,14 +8,20 @@ function search() {
     cardText = document.getElementsByClassName('content')[i].textContent.trim().toLowerCase();
 
     if (searchQuery !== '') {
-      if (cardText.indexOf(searchQuery) != -1) {
-        document.getElementsByClassName('column')[i].style.display = 'block';
-      } else {
+      if (cardText.indexOf(searchQuery) <= -1) {
         document.getElementsByClassName('column')[i].style.display = 'none';
       }
-    } else {
-      document.getElementsByClassName('column')[i].style.display = 'block';
     }
+
+    // if (searchQuery !== '') {
+    //   if (cardText.indexOf(searchQuery) != -1) {
+    //     document.getElementsByClassName('column')[i].style.display = 'block';
+    //   } else {
+    //     document.getElementsByClassName('column')[i].style.display = 'none';
+    //   }
+    // } else {
+    //   document.getElementsByClassName('column')[i].style.display = 'block';
+    // }
   }
 }
 
