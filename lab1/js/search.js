@@ -1,6 +1,6 @@
-//searching function
-function searching() {
-  //getting searching query from input field in lowercase 
+//search function
+function search() {
+  //getting search query from input field in lowercase 
   searchQuery = document.getElementById('searchField').value.toLowerCase();
 
   for (var i = 0; i < document.getElementsByClassName('content').length; i++) {
@@ -21,8 +21,8 @@ function searching() {
 
 document.querySelector('#searchField').addEventListener('keydown', function (event) {
   if (event.keyCode === 13) {
-    searching();
+    search();
   }
 })
 
-document.getElementById('searchButton').onclick = searching;
+document.getElementById('searchButton').onclick = search;
