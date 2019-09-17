@@ -1,22 +1,23 @@
 
-window.onload = function(){
+window.onload = function () {
   var btn = document.getElementById('button');
   var txtArea = document.getElementById('textarea');
 
-  btn.onclick=function(){
+  btn.onclick = function () {
     addTask();
-    txtArea.value="";
+    txtArea.value = "";
   }
-  
+  // add task handler
   function addTask() {
+    // add element to UI
     var taskContent = txtArea.value;
     var containerToDo = document.getElementById('container-to-do');
     var newTask = document.createElement('div');
-    newTask.classList.add('new','checkbox');
+    newTask.classList.add('new', 'checkbox');
     containerToDo.append(newTask);
     var label = document.createElement('label');
     var check = document.createElement('input');
-    check.setAttribute('type','checkbox');
+    check.setAttribute('type', 'checkbox');
     label.append(check);
     newTask.append(label);
     var text = document.createTextNode(taskContent);
@@ -25,19 +26,52 @@ window.onload = function(){
     icon.classList.add('glyphicon', 'glyphicon-trash', 'icon');
     newTask.append(icon);
 
-    txtArea.value="";
+    txtArea.value = "";
 
-    check.onclick=function(){
-      labeledTask();
-    }
+    // register events here:
 
-    function labeledTask(){
+    // complete task
+    // TODO: labeled - not valid name for CSS and context
+  
+    check.onclick = function () {
       label.classList.toggle('labeled');
-    }
+    };
+    
+    // TODO: delete task event
+    icon.onclick = function () {
+      
+      //console.log('delete');
+    };
+
   }
+// TODO: complete all handler here
+  /*
+    var completeAll = document.getElementById('complete-all');
+    completeAll.onclick = function () {
+      console.log('complete all');
+    };
+  */
 
+
+  // TODO: filter tasks
+  /*
+    var filterShowAll = document.getElementById('filter-show-all');
+    filterShowAll.onclick = function () {
+      console.log('show all');
+    };
+
+    var filterShowCompleted = document.getElementById('filter-show-completed');
+    filterShowCompleted.onclick = function () {
+      console.log('show completed');
+    };
+
+    var filterShowCompleted = document.getElementById('filter-show-removed');
+    filterShowRemoved.onclick = function () {
+      console.log('show removed');
+    };
+  */
 }
-
+//stuff
 // $(document).ready(function () {
 //   var btn = $('#button');
 //   // btn.prop("disabled", true);
