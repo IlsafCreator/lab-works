@@ -11,9 +11,10 @@
 }
 input {
 	border-radius: 5px;
-	width: 90%;
+	/*width: 90%;*/
 	margin: 20px auto;
-	display: block;
+  display: block;
+  
 }
 .new{
 	background-color: lightgray;
