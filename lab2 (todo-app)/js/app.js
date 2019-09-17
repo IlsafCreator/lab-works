@@ -5,20 +5,41 @@ window.onload = function(){
 
   btn.onclick=function(){
     addTask();
+    txtArea.value="";
   }
-
+  
   function addTask() {
+    var taskContent = txtArea.value;
+    var containerToDo = document.getElementById('container-to-do');
+    var newTask = document.createElement('div');
+    newTask.classList.add('new','checkbox');
+    containerToDo.append(newTask);
+    var label = document.createElement('label');
+    var check = document.createElement('input');
+    check.setAttribute('type','checkbox');
+    label.append(check);
+    newTask.append(label);
+    var text = document.createTextNode(taskContent);
+    label.append(text);
+    var icon = document.createElement('i');
+    icon.classList.add('glyphicon', 'glyphicon-trash', 'icon');
+    newTask.append(icon);
 
+    txtArea.value="";
+
+    check.onclick=function(){
+      labeledTask();
+    }
+
+    function labeledTask(){
+      label.classList.toggle('labeled');
+    }
   }
-  //stuff
-  //document.getElementById('searchButton').onclick=searching;
-  // if (btn!=0){
-  //   alert('alarm');
-  // }
+
 }
 
 // $(document).ready(function () {
-//   var btn = $('#btn');
+//   var btn = $('#button');
 //   // btn.prop("disabled", true);
 //   var textarea = $('#textarea');
 
