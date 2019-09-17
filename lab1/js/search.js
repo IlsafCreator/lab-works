@@ -21,4 +21,4 @@ document.querySelector('#search-field').addEventListener('keydown', function (ev
   }
 })
 
-document.getElementById('searchButton').onclick = search;
+document.getElementById('search-button').onclick = search;
