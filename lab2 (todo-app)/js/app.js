@@ -3,7 +3,12 @@ window.onload = function () {
   var txtArea = document.getElementById('textarea');
 
   btn.onclick = function () {
-    addTask();
+    if (txtArea.value.trim() != ""){
+      addTask();
+    }else{
+      alert("Please enter the text of your task.");
+    }
+    
     txtArea.value = "";
   }
   // add task handler
@@ -34,7 +39,8 @@ window.onload = function () {
 
     //delete task
     icon.onclick = function (event) {
-      event.currentTarget.parentElement.remove();
+      event.currentTarget.closest("div.new").remove();
+      //event.currentTarget.parentElement.remove();
     };
 
   }
