@@ -44,13 +44,21 @@ window.onload = function () {
     };
 
   }
-// TODO: complete all handler here
-  /*
-    var completeAll = document.getElementById('complete-all');
-    completeAll.onclick = function () {
-      console.log('complete all');
-    };
-  */
+
+  //handling Enter key
+  document.querySelector('#textarea').addEventListener('keydown', function (event) {
+    if (event.keyCode === 13) {
+      addTask();
+    }
+  })
+// complete all handler 
+  var completeAll = document.getElementById('complete-all');
+  completeAll.onclick = function () {
+    for (let index = 0; index < document.getElementsByClassName('new checkbox').length; index++) {
+      document.getElementsByClassName('new checkbox')[index].firstChild.classList.toggle('completed');
+    }
+  };
+  
 
 
   // TODO: filter tasks
