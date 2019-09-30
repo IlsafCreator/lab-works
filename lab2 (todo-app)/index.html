@@ -18,7 +18,27 @@
           <h1>TODO APP</h1>
           <input class="form-control" id="textarea" placeholder="New task text">
           <button id="button" type="submit" class="btn btn-primary">Add</button>
-          <input type="checkbox" id="complete-all">
+          <div class="tool-box">
+            <div class="tool-section filter-section">
+              <label for="filter-show-all" class="tool-button">Show all
+                <input type="radio" name="filter" id="filter-show-all" class="">
+              </label>
+              <label for="filter-show-completed" class="tool-button">Show completed
+                <input type="radio" name="filter" id="filter-show-completed">
+              </label>
+              <label for="filter-show-removed" class="tool-button">Show removed
+                <input type="radio" name="filter" id="filter-show-removed">
+              </label>
+              <label for="filter-show-active" class="tool-button">Show active
+                <input type="radio" name="filter" id="filter-show-active">
+              </label>
+            </div>
+            <div class="tool-section">
+              <label for="complete-all" class="tool-button">
+                <input type="checkbox" id="complete-all"> Complete all
+              </label>
+            </div>
+          </div>
           <div id="container-to-do"></div>
         </div>
       </div>
