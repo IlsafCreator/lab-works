@@ -8,11 +8,11 @@ window.onload = function () {
   //   }else{
   //     alert('Please enter the text of your task.');
   //   }
-    
+
   //   txtArea.value = "";
   // }
 
-  
+
   // add task handler
   function addTask() {
     // add element to UI
@@ -55,17 +55,17 @@ window.onload = function () {
   //handling Enter key
   document.querySelector('#textarea').addEventListener('keydown', function (event) {
     if (event.keyCode === 13) {
-      if (txtArea.value.trim() != ""){
+      if (txtArea.value.trim() != "") {
         addTask();
-      }else{
+      } else {
         alert('Please enter the text of your task.');
       }
-      
+
       txtArea.value = "";
     }
   })
 
-  
+
 
   // complete all handler 
   var completeAll = document.getElementById('complete-all');
@@ -97,84 +97,84 @@ window.onload = function () {
       }
     }
   };
-  
-    //show all filter
-    var filterShowAll = document.getElementById('filter-show-all');
-    filterShowAll.onclick = function () {
-      filterShowAll.closest('.tool-button').classList.add('selected');
 
-      filterShowCompleted.closest('.tool-button').classList.remove('selected');
-      filterShowRemoved.closest('.tool-button').classList.remove('selected');
-      filterShowActive.closest('.tool-button').classList.remove('selected');
-      var taskList = document.getElementsByClassName('new checkbox');
-      for (let index = 0; index < taskList.length; index++) {
-        if (!taskList[index].classList.contains('deleted')){
-          taskList[index].style.display = 'block';
-        }else{
-          taskList[index].style.display = 'none';
-        }
+  //show all filter
+  var filterShowAll = document.getElementById('filter-show-all');
+  filterShowAll.onclick = function () {
+    filterShowAll.closest('.tool-button').classList.add('selected');
+
+    filterShowCompleted.closest('.tool-button').classList.remove('selected');
+    filterShowRemoved.closest('.tool-button').classList.remove('selected');
+    filterShowActive.closest('.tool-button').classList.remove('selected');
+    var taskList = document.getElementsByClassName('new checkbox');
+    for (let index = 0; index < taskList.length; index++) {
+      if (!taskList[index].classList.contains('deleted')) {
+        taskList[index].style.display = 'block';
+      } else {
+        taskList[index].style.display = 'none';
       }
-     // console.log('show all');
-    };
+    }
+    // console.log('show all');
+  };
 
-    //show completed filter
-    var filterShowCompleted = document.getElementById('filter-show-completed');
-    filterShowCompleted.onclick = function () {
-      filterShowCompleted.closest('.tool-button').classList.add('selected');
+  //show completed filter
+  var filterShowCompleted = document.getElementById('filter-show-completed');
+  filterShowCompleted.onclick = function () {
+    filterShowCompleted.closest('.tool-button').classList.add('selected');
 
-      filterShowAll.closest('.tool-button').classList.remove('selected');
-      filterShowRemoved.closest('.tool-button').classList.remove('selected');
-      filterShowActive.closest('.tool-button').classList.remove('selected');
-      var taskList = document.getElementsByClassName('new checkbox');
+    filterShowAll.closest('.tool-button').classList.remove('selected');
+    filterShowRemoved.closest('.tool-button').classList.remove('selected');
+    filterShowActive.closest('.tool-button').classList.remove('selected');
+    var taskList = document.getElementsByClassName('new checkbox');
 
-      for (let index = 0; index < taskList.length; index++) {
-        if(!taskList[index].classList.contains('deleted')&&taskList[index].querySelector('label').classList.contains('completed')){
-          taskList[index].style.display = 'block';
-        }else{
-          taskList[index].style.display = 'none';
-        }
+    for (let index = 0; index < taskList.length; index++) {
+      if (!taskList[index].classList.contains('deleted') && taskList[index].querySelector('label').classList.contains('completed')) {
+        taskList[index].style.display = 'block';
+      } else {
+        taskList[index].style.display = 'none';
       }
-      //console.log('show completed');
-    };
+    }
+    //console.log('show completed');
+  };
 
-    //show removed filter
-    var filterShowRemoved = document.getElementById('filter-show-removed');
-    filterShowRemoved.onclick = function () {
-      filterShowRemoved.closest('.tool-button').classList.add('selected');
+  //show removed filter
+  var filterShowRemoved = document.getElementById('filter-show-removed');
+  filterShowRemoved.onclick = function () {
+    filterShowRemoved.closest('.tool-button').classList.add('selected');
 
-      filterShowAll.closest('.tool-button').classList.remove('selected');
-      filterShowCompleted.closest('.tool-button').classList.remove('selected');
-      filterShowActive.closest('.tool-button').classList.remove('selected');
-      var taskList = document.getElementsByClassName('new checkbox');
+    filterShowAll.closest('.tool-button').classList.remove('selected');
+    filterShowCompleted.closest('.tool-button').classList.remove('selected');
+    filterShowActive.closest('.tool-button').classList.remove('selected');
+    var taskList = document.getElementsByClassName('new checkbox');
 
-      for (let index = 0; index < taskList.length; index++) {
-        if (taskList[index].classList.contains('deleted')){
-          taskList[index].style.display = 'block';
-        }else{
-          taskList[index].style.display = 'none';
-        }
+    for (let index = 0; index < taskList.length; index++) {
+      if (taskList[index].classList.contains('deleted')) {
+        taskList[index].style.display = 'block';
+      } else {
+        taskList[index].style.display = 'none';
       }
-      //console.log('show removed');
-    };
+    }
+    //console.log('show removed');
+  };
 
-    //show active filter
-    var filterShowActive = document.getElementById('filter-show-active');
-    filterShowActive.onclick = function () {
-      filterShowActive.closest('.tool-button').classList.add('selected');
+  //show active filter
+  var filterShowActive = document.getElementById('filter-show-active');
+  filterShowActive.onclick = function () {
+    filterShowActive.closest('.tool-button').classList.add('selected');
 
-      filterShowAll.closest('.tool-button').classList.remove('selected');
-      filterShowCompleted.closest('.tool-button').classList.remove('selected');
-      filterShowRemoved.closest('.tool-button').classList.remove('selected');
-      var taskList = document.getElementsByClassName('new checkbox');
+    filterShowAll.closest('.tool-button').classList.remove('selected');
+    filterShowCompleted.closest('.tool-button').classList.remove('selected');
+    filterShowRemoved.closest('.tool-button').classList.remove('selected');
+    var taskList = document.getElementsByClassName('new checkbox');
 
-      for (let index = 0; index < taskList.length; index++) {
-        if(!taskList[index].classList.contains('deleted')&&!taskList[index].querySelector('label').classList.contains('completed')){
-          taskList[index].style.display = 'block';
-        }else{
-          taskList[index].style.display = 'none';
-        }
+    for (let index = 0; index < taskList.length; index++) {
+      if (!taskList[index].classList.contains('deleted') && !taskList[index].querySelector('label').classList.contains('completed')) {
+        taskList[index].style.display = 'block';
+      } else {
+        taskList[index].style.display = 'none';
       }
-      //console.log('show active');
-    };
-  
+    }
+    //console.log('show active');
+  };
+
 }
