@@ -1,25 +1,12 @@
 window.onload = function () {
-  //var btn = document.getElementById('button');
   var txtArea = document.getElementById('textarea');
-
-  // btn.onclick = function () {
-  //   if (txtArea.value.trim() != ""){
-  //     addTask();
-  //   }else{
-  //     alert('Please enter the text of your task.');
-  //   }
-
-  //   txtArea.value = "";
-  // }
-
-
   // add task handler
   function addTask() {
     // add element to UI
     var taskContent = txtArea.value;
     var containerToDo = document.getElementById('container-to-do');
     var newTask = document.createElement('div');
-    newTask.classList.add('new', 'checkbox');
+    newTask.classList.add('task');
     containerToDo.append(newTask);
     var label = document.createElement('label');
     label.classList.add('task-label');
@@ -31,10 +18,10 @@ window.onload = function () {
     var text = document.createTextNode(taskContent);
     label.append(text);
     var icon = document.createElement('i');
-    icon.classList.add('glyphicon', 'glyphicon-trash', 'icon');
+    icon.classList.add('task-remove');
     newTask.append(icon);
 
-    txtArea.value = "";
+    txtArea.value = '';
 
     //mark task as completed
     check.onclick = function () {
@@ -43,11 +30,10 @@ window.onload = function () {
 
     //delete task
     icon.onclick = function (event) {
-      if (!event.currentTarget.closest('div.new').classList.contains('deleted')) {
-        event.currentTarget.closest('div.new').style.display = 'none';
+      if (!event.currentTarget.closest('div.task').classList.contains('deleted')) {
+        event.currentTarget.closest('div.task').style.display = 'none';
       }
-      event.currentTarget.closest('div.new').classList.add('deleted');
-      //event.currentTarget.closest('div.new').remove();
+      event.currentTarget.closest('div.task').classList.add('deleted');
     };
     document.getElementById('complete-all').classList.remove('active');
   }
@@ -55,13 +41,13 @@ window.onload = function () {
   //handling Enter key
   document.querySelector('#textarea').addEventListener('keydown', function (event) {
     if (event.keyCode === 13) {
-      if (txtArea.value.trim() != "") {
+      if (txtArea.value.trim() != '') {
         addTask();
       } else {
         alert('Please enter the text of your task.');
       }
 
-      txtArea.value = "";
+      txtArea.value = '';
     }
   })
 
@@ -70,7 +56,7 @@ window.onload = function () {
   // complete all handler 
   var completeAll = document.getElementById('complete-all');
   completeAll.onclick = function () {
-    var taskList = document.getElementsByClassName('new checkbox');
+    var taskList = document.getElementsByClassName('task');
 
     for (let index = 0; index < taskList.length; index++) {
       var taskLabel = taskList[index].querySelector('.task-label')
@@ -79,11 +65,9 @@ window.onload = function () {
       if (!taskList[index].classList.contains('deleted') && completeAll.checked) {
         taskLabel.classList.add('completed');
         taskCheckbox.checked = true;
-        //console.log(1);
       } else {
         taskLabel.classList.remove('completed');
         taskCheckbox.checked = false;
-        //console.log(0);
       }
 
       taskCheckbox.onclick = function (event) {
@@ -106,7 +90,7 @@ window.onload = function () {
     filterShowCompleted.closest('.tool-button').classList.remove('selected');
     filterShowRemoved.closest('.tool-button').classList.remove('selected');
     filterShowActive.closest('.tool-button').classList.remove('selected');
-    var taskList = document.getElementsByClassName('new checkbox');
+    var taskList = document.getElementsByClassName('task');
     for (let index = 0; index < taskList.length; index++) {
       if (!taskList[index].classList.contains('deleted')) {
         taskList[index].style.display = 'block';
@@ -114,7 +98,6 @@ window.onload = function () {
         taskList[index].style.display = 'none';
       }
     }
-    // console.log('show all');
   };
 
   //show completed filter
@@ -125,7 +108,7 @@ window.onload = function () {
     filterShowAll.closest('.tool-button').classList.remove('selected');
     filterShowRemoved.closest('.tool-button').classList.remove('selected');
     filterShowActive.closest('.tool-button').classList.remove('selected');
-    var taskList = document.getElementsByClassName('new checkbox');
+    var taskList = document.getElementsByClassName('task');
 
     for (let index = 0; index < taskList.length; index++) {
       if (!taskList[index].classList.contains('deleted') && taskList[index].querySelector('label').classList.contains('completed')) {
@@ -134,7 +117,6 @@ window.onload = function () {
         taskList[index].style.display = 'none';
       }
     }
-    //console.log('show completed');
   };
 
   //show removed filter
@@ -145,7 +127,7 @@ window.onload = function () {
     filterShowAll.closest('.tool-button').classList.remove('selected');
     filterShowCompleted.closest('.tool-button').classList.remove('selected');
     filterShowActive.closest('.tool-button').classList.remove('selected');
-    var taskList = document.getElementsByClassName('new checkbox');
+    var taskList = document.getElementsByClassName('task');
 
     for (let index = 0; index < taskList.length; index++) {
       if (taskList[index].classList.contains('deleted')) {
@@ -154,7 +136,6 @@ window.onload = function () {
         taskList[index].style.display = 'none';
       }
     }
-    //console.log('show removed');
   };
 
   //show active filter
@@ -165,10 +146,11 @@ window.onload = function () {
     filterShowAll.closest('.tool-button').classList.remove('selected');
     filterShowCompleted.closest('.tool-button').classList.remove('selected');
     filterShowRemoved.closest('.tool-button').classList.remove('selected');
-    var taskList = document.getElementsByClassName('new checkbox');
+    var taskList = document.getElementsByClassName('task');
 
     for (let index = 0; index < taskList.length; index++) {
-      if (!taskList[index].classList.contains('deleted') && !taskList[index].querySelector('label').classList.contains('completed')) {
+      if (!taskList[index].classList.contains('deleted')
+        && !taskList[index].querySelector('label').classList.contains('completed')) {
         taskList[index].style.display = 'block';
       } else {
         taskList[index].style.display = 'none';
@@ -176,5 +158,4 @@ window.onload = function () {
     }
     //console.log('show active');
   };
-
 }
