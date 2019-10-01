@@ -202,15 +202,6 @@ body {
   margin-left: -50px;
 }
 
-.tool-section.filter-section{
-  color: inherit;
-  margin-left: 50px;
-  padding: 10px 10px;
-  text-decoration: none;
-  /* border: 1px solid transparent; */
-  /* border-radius: 3px; */
-}
-
 /* .todo-list div .toggle{
   opacity: 0;
 } */
@@ -392,8 +383,14 @@ html .clear-completed:active {
 	}
 }
 
-
-
+.filter-section{
+  color: inherit;
+  margin-left: 50px;
+  padding: 10px 10px;
+  text-decoration: none;
+  /* border: 1px solid transparent; */
+  /* border-radius: 3px; */
+}
 
 .filter-section label{
   color: inherit;
