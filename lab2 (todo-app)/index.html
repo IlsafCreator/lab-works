@@ -6,9 +6,9 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="vendors/bootstrap/css/bootstrap.css">
-  <!-- <link rel="stylesheet" type="text/css" href="css/new.css"> -->
-  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <!-- <link rel="stylesheet" type="text/css" href="vendors/bootstrap/css/bootstrap.css"> -->
+  <link rel="stylesheet" type="text/css" href="css/new.css">
+  <!-- <link rel="stylesheet" type="text/css" href="css/main.css"> -->
 </head>
 
 <body>
@@ -17,8 +17,8 @@
       <div class="row">
         <div class="col-xs-12">
           <h1>TODO APP</h1>
-          <input class="form-control" id="textarea" placeholder="New task text">
-          <button id="button" type="submit" class="btn btn-primary">Add</button>
+          <input class="new-todo" id="textarea" placeholder="New task text">
+          <!-- <button id="button" type="submit" class="btn btn-primary">Add</button> -->
           <div class="tool-box">
             <div class="tool-section filter-section">
               <label for="filter-show-all" class="tool-button">Show all
@@ -35,12 +35,13 @@
               </label>
             </div>
             <div class="tool-section">
-              <label for="complete-all" class="tool-button">
-                <input type="checkbox" id="complete-all"> Complete all
+              <label for="complete-all" class="tool-button ">Complete all
+                <input type="checkbox" id="complete-all" >
+                <label></label>
               </label>
             </div>
           </div>
-          <div id="container-to-do"></div>
+          <div id="container-to-do" class="todo-list"></div>
         </div>
       </div>
     </div>
