@@ -131,6 +131,7 @@ body {
 }
 
 .complete-all-label {
+  
   width: 60px;
   height: 34px;
   font-size: 0;
@@ -142,6 +143,7 @@ body {
 }
 
 .complete-all-label::before {
+  cursor: pointer;
   content: '►';
   font-size: 22px;
   color: #e6e6e6;
@@ -165,6 +167,7 @@ body {
 }
 
 .todo-list div .toggle {
+  cursor: pointer;
   /* text-align: center; */
   width: 40px;
   height: auto;
