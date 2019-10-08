@@ -47,6 +47,8 @@ tr.day-of-the-week>th {
   padding: 10px;
 }
 
+
+
 .calendar-table td {
   padding: 10px;
   text-align: right;
@@ -86,6 +88,13 @@ td.another-month {
   border: 5px solid #efefef;
 }
 
+.current-day{
+  border-radius: 100%;
+  padding: 7px 9px 8px 10px;
+  background-color: #ff0000;
+  color:white;
+}
+
 .theme-switch {
   position: relative;
   float: right;
@@ -116,4 +125,7 @@ td.another-month {
 
 .dark-mode td.another-month {
   color: #858282;
+}
+.dark-mode .current-day {
+    background-color: #888888;
 }
