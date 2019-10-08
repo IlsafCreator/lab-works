@@ -10,6 +10,7 @@ body {
 
 .calendar-app {
   background-color: #efefef;
+  /* background-color: #efefef; */
   /* background-color: #ffffff; */
   width: 100%;
   height: 100vh;
@@ -42,7 +43,7 @@ tr.day-of-the-week>th {
   padding-right: 20px;
 }
 
-span {
+.day {
   padding: 10px;
 }
 
@@ -80,7 +81,39 @@ td.another-month {
   font-weight: bold;
 }
 
-.calendar-app>div {
+.calendar-title {
   background-color: #ffffff;
   border: 5px solid #efefef;
+}
+
+.theme-switch {
+  position: relative;
+  float: right;
+}
+
+.theme-switch>input {
+  display: none;
+}
+
+.dark-mode .calendar-title, .dark-mode .day-of-the-week, .dark-mode .calendar-table td {
+  color: #ffffff;
+  background-color: #515151;
+  border-color: #919090;
+}
+
+.dark-mode.calendar-app {
+  background-color: #919090;
+}
+
+.dark-mode .calendar-table td {
+  border: 3px solid #919090;
+}
+
+.dark-mode td.weekends {
+  background-color: #414040;
+  color: #919090;
+}
+
+.dark-mode td.another-month {
+  color: #858282;
 }
