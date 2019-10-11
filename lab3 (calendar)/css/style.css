@@ -73,7 +73,7 @@ td.another-month {
 }
 
 .current-month {
-  font-weight: bold;
+  font-weight: normal;
 }
 
 .calendar-title {
@@ -161,6 +161,7 @@ td.holiday {
 }
 
 /* For the "dark-mode" */
+
 .dark-mode .descr>a {
   text-decoration: none;
   color: white;
