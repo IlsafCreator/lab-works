@@ -1,0 +1,121 @@
+*{
+  box-sizing: border-box;
+  font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+}
+body {
+  background: #F3F3F3;
+  margin-left: 20px;
+  margin-right: 40px;
+}
+ul{
+  list-style:none;
+  padding: 0px;
+}
+header{
+  position: sticky;
+  top: 20px;
+  margin-top: 20px;
+
+}
+li{
+  margin-top: 5px;
+}
+li:hover{
+  transition: 350ms;
+  background: rgba(192, 192, 189, 0.247);
+}
+
+.goods{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* justify-content: space-around; */
+}
+
+.goods{
+  height: 100%;
+  width: 75%;
+  float: right;
+  /* background: rgb(175, 149, 139); */
+}
+
+article{
+  width: 31%;
+  height: 250px;
+  /* height: 100px; */
+  background: rgb(255, 255, 255);
+  margin: 0px 10px 10px 10px;
+  padding:15px; 
+  outline: 1px solid #000000;
+}
+.product-card:hover{
+  box-shadow: 0px 0px 0px 7px #e0e3e5;;
+}
+.product-image{
+  /* padding-left:20px; */
+  height: 60%;
+  width:100%;
+  outline: 1px solid #000000;
+  background: rgb(255, 255, 255);
+  text-align: center;
+  font-size: 2em;
+}
+.product-name{
+  font-size: 30px;
+  color: #000000;
+  text-decoration: none;
+  font-weight: bolder;
+}
+.add-to-cart{
+  font-size: 20px;
+  text-decoration: underline;
+}
+.logo,.cart{
+  text-align: center;
+  outline: 1px solid #000000;
+  background-color: #ffffff;
+  display: table-cell;
+  font-size: 1.5em;
+}
+.logo{
+  float: left;
+  height: 100%;
+  width: 25%;
+  vertical-align: baseline;
+
+}
+.cart{
+  height: 100%;
+  width: 15%;
+  float: right;
+  position: relative;
+  right: 16px;
+}
+.container{
+  /* width: 100%; */
+  height: 70px;
+  /* background-color: red; */
+  /* padding:5px; */
+  position: relative;
+}
+main{
+  /* border: 1px solid #000000; */
+  /* outline: 1px solid #000000; */
+  margin-top: 10px;
+  height: 90vh;
+  /* background: olivedrab; */
+}
+nav{
+  /* border: 1px solid #000000; */
+  outline: 1px solid #000000;
+  background-color: #ffffff;
+  float: left;
+  width: 23.8%;
+  height: 70%;
+  position: fixed;
+  top: 100px;
+  padding-top: 10px;
+  padding-left:20px
+  /* width: 100px; */
+  /* height: 200px; */
+}
