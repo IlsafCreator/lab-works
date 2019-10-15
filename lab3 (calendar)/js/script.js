@@ -48,12 +48,10 @@ window.onload = function () {
 
   var cellsArray = document.querySelectorAll('.day');
   for (let index = 0; index < cellsArray.length; index++) {
-    if (cellsArray[index].textContent == currentDay) {
-      if (!cellsArray[index].parentElement.classList.contains('another-month')) {
-        cellsArray[index].classList.toggle('current-day');
-      }
+    if ((parseInt(cellsArray[index].textContent, 10) === currentDay) && (!cellsArray[index]
+      .parentElement.classList.contains('another-month'))) {
+      cellsArray[index].classList.toggle('current-day');
     }
-
   }
 
   var switchTheme = document.querySelector('#theme-switch-box');
@@ -61,7 +59,7 @@ window.onload = function () {
   switchTheme.onclick = function () {
     var calendarApp = document.querySelector('.calendar-app');
     calendarApp.classList.toggle('dark-mode');
-    if (switchLabel.textContent == 'Light Theme') {
+    if (switchLabel.textContent === 'Light Theme') {
       switchLabel.textContent = 'Dark Theme';
     } else {
       switchLabel.textContent = 'Light Theme';
