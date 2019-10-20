@@ -4,85 +4,189 @@
 <head>
   <meta charset="UTF-8">
   <title>Online-store</title>
+  <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/store.css">
 </head>
 
 <body>
 
   <header>
-    <div class="container">
-      <div class="logo">{logo}</div>
-      <div class="cart">{корзина покупателя}</div>
+    <div class="header-container">
+      <div class="logo">
+        <span class="logo-name">
+          Бананька</span>
+        <img class="logo-image" src="images/banana.png" alt="banana">
+      </div>
+      <div class="cart">
+        <span>Корзина</span>
+        <img class="cart-image" src="images/shopping-cart.png" alt="shopping-cart">
+      </div>
     </div>
   </header>
   <aside>
-      <nav>
-        {Меню категории}
+    <nav class="navigation-panel">
       <ul>
-        <li>электронная техника</li>
-        <li>бытовая техника</li>
-        <li>категория 1</li>
-        <li>категория 2</li>
-        <li>категория 3</li>
-        <li>категория 4</li>
+        <a href="">
+          <li>электронная техника</li>
+        </a>
+        <a href="">
+          <li>бытовая техника</li>
+        </a>
+        <a href="">
+          <li>категория 1</li>
+        </a>
+        <a href="">
+          <li>категория 2</li>
+        </a>
+        <a href="">
+          <li>категория 3</li>
+        </a>
+        <a href="">
+          <li>категория 4</li>
+        </a>
       </ul>
-
     </nav>
   </aside>
   <main>
 
-    <div class="goods">
+    <div class="product-list">
       <article class="product-card">
-        <div class="product-image">{картинка}</div>
-        <a href="product-page.html" class="product-name">Название 1</a>
-        <div class="add-to-cart">Добавить в корзину</div>
+        <div class="product-image">
+          <img src="images/imac.jpg" alt="imac">
+        </div>
+        <a href="" class="product-name">iMac 21.5"</a>
+        <span class="product-cost">$1,099</span>
+        <img src="images/add-to-cart.png" class="add-to-cart" alt="">
       </article>
       <article class="product-card">
-        <div class="product-image">{картинка}</div>
-        <a href="product-page.html" class="product-name">Название 2</a>
-        <div class="add-to-cart">Добавить в корзину</div>
+        <div class="product-image">
+          <img src="images/Core i5-9500.jpg" alt="imac">
+        </div>
+        <a href="" class="product-name">Intel Core i5-9500</a><span class="product-cost">$239</span>
+        <img src="images/add-to-cart.png" class="add-to-cart" alt="">
       </article>
       <article class="product-card">
-        <div class="product-image">{картинка}</div>
-        <a href="product-page.html" class="product-name">Название 3</a>
-        <div class="add-to-cart">Добавить в корзину</div>
+        <div class="product-image">
+          <img src="images/iphone 8.jpg" alt="imac">
+        </div>
+        <a href="" class="product-name">iPhone 8 64gb</a><span class="product-cost">$649</span>
+        <img src="images/add-to-cart.png" class="add-to-cart" alt="">
       </article>
       <article class="product-card">
-        <div class="product-image">{картинка}</div>
-        <a href="product-page.html" class="product-name">Название 4</a>
-        <div class="add-to-cart">Добавить в корзину</div>
+        <div class="product-image">
+          <img src="images/LED TV LG 28MT49S-PZ.jpg" alt="imac">
+        </div>
+        <a href="" class="product-name">LED TV LG 28MT49S-PZ</a><span class="product-cost">199$</span>
+        <img src="images/add-to-cart.png" class="add-to-cart" alt="">
       </article>
       <article class="product-card">
-        <div class="product-image">{картинка}</div>
-        <a href="product-page.html" class="product-name">Название 5</a>
-        <div class="add-to-cart">Добавить в корзину</div>
+        <div class="product-image">
+          <img src="images/macintosh.jpg" alt="imac">
+        </div>
+        <a href="" class="product-name">Macintosh 128k</a><span class="product-cost">$99999</span>
+        <img src="images/add-to-cart.png" class="add-to-cart" alt="">
       </article>
       <article class="product-card">
-        <div class="product-image">{картинка}</div>
-        <a href="product-page.html" class="product-name">Название 6</a>
-        <div class="add-to-cart">Добавить в корзину</div>
+        <div class="product-image">
+          <img src="images/Me Notebook pro.jpg" alt="imac">
+        </div>
+        <a href="" class="product-name">Me Notebook Pro</a><span class="product-cost">$959</span>
+        <img src="images/add-to-cart.png" class="add-to-cart" alt="">
       </article>
       <article class="product-card">
-        <div class="product-image">{картинка}</div>
-        <a href="product-page.html" class="product-name">Название 7</a>
-        <div class="add-to-cart">Добавить в корзину</div>
+        <div class="product-image">
+          <img src="images/MSI GeForce GTX 1050 Ti.jpg" alt="imac">
+        </div>
+        <a href="" class="product-name">MSI GeForce GTX 1050</a><span class="product-cost">$149</span>
+        <img src="images/add-to-cart.png" class="add-to-cart" alt="">
       </article>
       <article class="product-card">
-        <div class="product-image">{картинка}</div>
-        <a href="product-page.html" class="product-name">Название 8</a>
-        <div class="add-to-cart">Добавить в корзину</div>
+        <div class="product-image">
+          <img src="images/Nokia 3310.jpg" alt="imac">
+        </div>
+        <a href="" class="product-name">Nokia 3310</a><span class="product-cost">$99</span>
+        <img src="images/add-to-cart.png" class="add-to-cart" alt="">
       </article>
       <article class="product-card">
-        <div class="product-image">{картинка}</div>
-        <a href="product-page.html" class="product-name">Название 9</a>
-        <div class="add-to-cart">Добавить в корзину</div>
+        <div class="product-image">
+          <img src="images/pillow.jpg" alt="imac">
+        </div>
+        <a href="" class="product-name">Подушка Mark1</a><span class="product-cost">123</span>
+        <img src="images/add-to-cart.png" class="add-to-cart" alt="">
       </article>
+      <article class="product-card">
+        <div class="product-image">
+          <img src="images/pillow.jpg" alt="imac">
+        </div>
+        <a href="" class="product-name">Подушка Mark1</a><span class="product-cost">123</span>
+        <img src="images/add-to-cart.png" class="add-to-cart" alt="">
+      </article>
+      <article class="product-card">
+        <div class="product-image">
+          <img src="images/LED TV LG 28MT49S-PZ.jpg" alt="imac">
+        </div>
+        <a href="" class="product-name">LED TV LG 28MT49S-PZ</a><span class="product-cost">199$</span>
+        <img src="images/add-to-cart.png" class="add-to-cart" alt="">
+      </article>
+      <article class="product-card">
+        <div class="product-image">
+          <img src="images/pillow.jpg" alt="imac">
+        </div>
+        <a href="" class="product-name">Подушка Mark1</a><span class="product-cost">123</span>
+        <img src="images/add-to-cart.png" class="add-to-cart" alt="">
+      </article>
+      <article class="product-card">
+        <div class="product-image">
+          <img src="images/Me Notebook pro.jpg" alt="imac">
+        </div>
+        <a href="" class="product-name">Me Notebook Pro</a><span class="product-cost">$959</span>
+        <img src="images/add-to-cart.png" class="add-to-cart" alt="">
+      </article>
+      <article class="product-card">
+        <div class="product-image">
+          <img src="images/MSI GeForce GTX 1050 Ti.jpg" alt="imac">
+        </div>
+        <a href="" class="product-name">MSI GeForce GTX 1050</a><span class="product-cost">$149</span>
+        <img src="images/add-to-cart.png" class="add-to-cart" alt="">
+      </article>
+      <article class="product-card">
+        <div class="product-image">
+          <img src="images/Nokia 3310.jpg" alt="imac">
+        </div>
+        <a href="" class="product-name">Nokia 3310</a><span class="product-cost">$99</span>
+        <img src="images/add-to-cart.png" class="add-to-cart" alt="">
+      </article>
+      <article class="product-card">
+        <div class="product-image">
+          <img src="images/macintosh.jpg" alt="imac">
+        </div>
+        <a href="" class="product-name">Macintosh 128k</a><span class="product-cost">$99999</span>
+        <img src="images/add-to-cart.png" class="add-to-cart" alt="">
+      </article>
+      <article class="product-card">
+        <div class="product-image">
+          <img src="images/pillow.jpg" alt="imac">
+        </div>
+        <a href="" class="product-name">Подушка Mark1</a><span class="product-cost">123</span>
+        <img src="images/add-to-cart.png" class="add-to-cart" alt="">
+      </article>
+      <article class="product-card">
+        <div class="product-image">
+          <img src="images/imac.jpg" alt="imac">
+        </div>
+        <div>
+          <a href="" class="product-name">iMac 21.5"</a>
+          <span class="product-cost">$1,099</span>
+          <img src="images/add-to-cart.png" class="add-to-cart" alt="">
+      </article>
+
     </div>
-  </main>
+    </Core i5-9500.jpgain>
 
-  <footer>
+    <footer>
 
-  </footer>
+    </footer>
 
 </body>
 
