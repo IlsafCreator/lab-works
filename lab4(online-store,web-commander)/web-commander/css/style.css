@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+}
+
+body {
+  margin: 0px;
+  /* height: 100vh; */
+  /* width: 100%; */
+  background-color: #F3F3F3;
+}
+
+.web-commander {
+  margin: 10px;
+  /* height: 100%; */
+  /* width: 100%; */
+  /* background-color: rgb(137, 139, 103); */
+}
+
+.program-title {
+  display: block;
+  width: 100%;
+  padding-left: 20px;
+  font-size: 30px;
+  font-weight: bolder;
+  /* text-align: center; */
+}
+
+.main-window {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-around; */
+  /* background-color: rgb(169, 231, 211); */
+}
+
+.side {
+  margin: 5px 10px 5px 10px;
+  width: 50%;
+  height: 500px;
+  /* background-color: rgb(101, 138, 126); */
+  overflow: hidden;
+}
+
+.fake-input {
+  font-size: 20px;
+  padding: 7px;
+  width: 100%;
+  border: 2px solid #000;
+  height: 6%;
+  display: inline-block;
+}
+
+.main-part {
+  background-color: #ffffff;
+  margin-top: 10px;
+  padding:10px;
+  height: 100%;
+  /* overflow: hidden; */
+  width: 100%;
+}
+
+.directory-row {
+  font-size: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 5px;
+  height: 60px;
+  /* background: rgb(240, 230, 230); */
+}
+
+.directory-row:hover {
+  background: rgba(207, 226, 243, 0.733);
+}
+
+.directory-row.selected {
+  background: rgb(207, 226, 243);
+}
+
+.element-type {
+  /* background: rgb(172, 224, 248); */
+}
+
+.element-size {
+  color: #B7B7B7;
+  /* background: rgb(130, 190, 148); */
+}
+
+/* .header-title{
+  display: inline-block;
+  font-size: 30px;
+}
+.main-window{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 90vh;
+  overflow: hidden;
+}
+
+.fake-input{
+  padding: 10px;
+  font-size: 20px;
+  display: inline-block;
+  width:100%;
+  border:2px solid #000;
+  height: 7%;
+}
+
+.left-side{
+  background-color: #c8da66;
+}
+
+.right-side{
+  background-color: #923333;
+}
+
+.page{
+  
+  width: 40%;
+  height: 100%;
+}
+.main-part{
+  margin-top: 10px;
+  height: 100%;
+  background-color: #ffffff;
+} */
