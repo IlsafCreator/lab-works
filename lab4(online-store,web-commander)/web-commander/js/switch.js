@@ -1,5 +1,5 @@
 window.onload = function() {
-  let directoryRows = document.querySelectorAll('.directory-row');
+  let directoryRows = document.querySelectorAll('.element-row');
 
   for (let index = 0; index < directoryRows.length; index++) {
     const element = directoryRows[index];
