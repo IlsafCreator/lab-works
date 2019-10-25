@@ -1,22 +1,10 @@
 window.onload = function() {
-  let directoryRows = document.querySelectorAll('.element-row');
+  let elementRows = document.querySelectorAll('.element-row');
 
-  for (let index = 0; index < directoryRows.length; index++) {
-    const element = directoryRows[index];
+  for (let index = 0; index < elementRows.length; index++) {
+    const element = elementRows[index];
     element.onclick = function (event) {
       console.log("aw");
     };
   }
-  
-  // for (let row of rows) {
-  //   row.onclick = function (event) {
-  //     // console.log(row.innerText);
-  //     console.log(event.target.parentElement.rowIndex);
-  //     if (event.target.parentElement.rowIndex === row.rowIndex) {
-  //       row.classList.add('selected');
-  //     } else {
-  //       row.classList.remove('selected');
-  //     }
-  //   };
-  // }
 }
