@@ -1,34 +1,33 @@
 var cashbox = {
   amount: 0,
   addPayment: function (payment) {
-    if (payment.amount > 0) {
-      this.amount = this.amount + payment.amount;
-      if (payment.info === null || payment.info === undefined) {
-        console.log('Пополнение счёта на сумму ' + payment.amount + ' уе произведёно.');
-        console.log('Текущий баланс: ' + this.amount + ' уе.');
-      } else {
+    if ((payment !== undefined || null || NaN) && (typeof (payment.amount) === 'number') && (typeof (payment.info) === 'string') && (payment.amount !== undefined || null || NaN) && (payment.info !== undefined || null || NaN)) {
+      if (payment.amount > 0) {
+        this.amount = this.amount + payment.amount;
         console.log('Зачисление на счёт. Платеж: "' + payment.info + '" на сумму: ' + payment.amount + ' уе произведён.');
         console.log('Текущий баланс: ' + this.amount + ' уе.');
+      } else {
+        console.log('ОШИБКА. Не удаётся совершить платёж "' + payment.info + '"');
       }
     } else {
-      console.log('ОШИБКА. Не удаётся совершить платёж "' + payment.info + '"');
+      console.log('ОШИБКА. Введите правильные данные');
     }
   },
   refundPayment: function (refund) {
-    if (this.amount > 0 && this.amount - refund.amount >= 0 && refund.amount > 0) {
-      this.amount = this.amount - refund.amount;
-      if (refund.info === null || refund.info === undefined) {
-        console.log('Снятие со счёта на сумму ' + refund.amount + ' уе произведёно.');
-        console.log('Текущий баланс: ' + this.amount + ' уе.');
-      } else {
+    if ((refund !== undefined || null || NaN) && (typeof (refund.amount) === 'number') && (typeof (refund.info) === 'string') && (refund.amount !== undefined || null || NaN) && (refund.info !== undefined || null || NaN)) {
+      if (this.amount > 0 && this.amount - refund.amount >= 0 && refund.amount > 0) {
+        this.amount = this.amount - refund.amount;
         console.log('Снятие со счёта. "' + refund.info + '" на сумму: ' + refund.amount + ' уе.');
         console.log('Текущий баланс: ' + this.amount + ' уе.');
+
+      } else if (this.amount >= 0 && this.amount - refund.amount < 0) {
+        console.log('ОШИБКА. Недостаточно средств для снятия со счёта ');
+        console.log('Текущий баланс: ' + this.amount + ' уе.');
+      } else {
+        console.log('ОШИБКА. Не удаётся совершить снятие.');
       }
-    } else if (this.amount >= 0 && this.amount - refund.amount < 0) {
-      console.log('ОШИБКА. Недостаточно средств для снятия со счёта ');
-      console.log('Текущий баланс: ' + this.amount + ' уе.');
     } else {
-      console.log('ОШИБКА. Не удаётся совершить снятие.');
+      console.log('ОШИБКА. Введите правильные данные');
     }
   }
 };
