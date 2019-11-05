@@ -9,9 +9,9 @@
     "jshint": "main.js"
   },
   "scripts": {
-    "server": "live-server src\\index.html",
-    "validate-html": "html-validate src\\index.html",
-    "validate-css": "css-validator src\\css\\style.css",
+    "server": "live-server src\\task-1\\index.html",
+    "validate-html": "html-validate src\\task-1\\index.html",
+    "validate-css": "css-validator src\\task1-1\\css\\style.css",
     "jshint": "jshint src\\js\\script.js",
     "watch": "npm-watch",
     "dev-mode": "npm-run-all --parallel server watch",
