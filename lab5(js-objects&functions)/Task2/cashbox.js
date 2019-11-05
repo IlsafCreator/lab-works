@@ -1,7 +1,15 @@
 var cashbox = {
   amount: 0,
+  isOperationValid: function (operation, operationAmount, operationInfo) {
+    if (!operation && !operationAmount && !operationInfo &&
+      (typeof (operationAmount) === 'number') && (typeof (operationInfo) === 'string')) {
+      return false;
+    } else {
+      return true;
+    }
+  },
   addPayment: function (payment) {
-    if ((payment !== undefined || null || NaN) && (typeof (payment.amount) === 'number') && (typeof (payment.info) === 'string') && (payment.amount !== undefined || null || NaN) && (payment.info !== undefined || null || NaN)) {
+    if (this.isOperationValid(payment, payment.amount, payment.info)) {
       if (payment.amount > 0) {
         this.amount = this.amount + payment.amount;
         console.log('Зачисление на счёт. Платеж: "' + payment.info + '" на сумму: ' + payment.amount + ' уе произведён.');
@@ -14,7 +22,7 @@ var cashbox = {
     }
   },
   refundPayment: function (refund) {
-    if ((refund !== undefined || null || NaN) && (typeof (refund.amount) === 'number') && (typeof (refund.info) === 'string') && (refund.amount !== undefined || null || NaN) && (refund.info !== undefined || null || NaN)) {
+    if (this.isOperationValid(refund, refund.amount, refund.info)) {
       if (this.amount > 0 && this.amount - refund.amount >= 0 && refund.amount > 0) {
         this.amount = this.amount - refund.amount;
         console.log('Снятие со счёта. "' + refund.info + '" на сумму: ' + refund.amount + ' уе.');
@@ -31,10 +39,9 @@ var cashbox = {
     }
   }
 };
-
-
 cashbox.addPayment({ amount: -10, info: 'Оплата штрафа' });
 cashbox.addPayment({ amount: 10, info: 'Оплата ЖКХ' });
+cashbox.addPayment({ amount: 1000, info: 'Оплата ЖКХ' });
 
 cashbox.refundPayment({ amount: 10, info: 'Возврат клиенту' });
 cashbox.refundPayment({ amount: 100, info: 'Налоги' });
