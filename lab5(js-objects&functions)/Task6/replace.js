@@ -5,10 +5,10 @@ function replaceString(text, sourceSubstring, replaceSubstring) {
       return (text = text.slice(0, text.indexOf(sourceSubstring)) + replaceSubstring +
         text.slice(text.indexOf(sourceSubstring) + sourceSubstring.length, text.length));
     } else {
-      return (false);
+      return false;
     }
   } else {
-    return (false);
+    return false;
   }
 }
 
