@@ -13,6 +13,7 @@ function check(data, expectedType) {
     throw new Error('Данные и ожидаемый тип не совпадают');
   }
 }
+
 try {
   console.log("--------------------------------------------------------");
   console.log(check());
@@ -48,5 +49,5 @@ try {
   console.log(check(null, 'null')); // true
   console.log(check('test', 'string')); // true
 } catch (error) {
-  console.log('alarm');
+  console.error(error);
 }
