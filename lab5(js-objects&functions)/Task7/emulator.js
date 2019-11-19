@@ -1,3 +1,4 @@
+var fieldSize = 5;
 var soldier1 = {
   name: 'John',
   health: 100,
@@ -5,15 +6,15 @@ var soldier1 = {
   shot: function () {
     // console.log();
     if (this.health > 0) {
-      var shotX = Math.floor(Math.random() * 5);
-      var shotY = Math.floor(Math.random() * 5);
+      var shotX = Math.floor(Math.random() * fieldSize);
+      var shotY = Math.floor(Math.random() * fieldSize);
       console.log(this.name, 'выстрелил в координаты [' + shotX + ';' + shotY + ']');
       return [shotX, shotY];
     }
   },
   spawn: function () {
-    this.currentCoordinates.x = Math.floor(Math.random() * 5);
-    this.currentCoordinates.y = Math.floor(Math.random() * 5);
+    this.currentCoordinates.x = Math.floor(Math.random() * fieldSize);
+    this.currentCoordinates.y = Math.floor(Math.random() * fieldSize);
     console.log(this.name + ' spawned at ' + this.currentCoordinates.x + ' ; ' + this.currentCoordinates.y);
   },
   checkDamage: function (x, y) {
@@ -33,15 +34,15 @@ var soldier2 = {
   shot: function () {
     // console.log(x, y);
     if (this.health > 0) {
-      var shotX = Math.floor(Math.random() * 5);
-      var shotY = Math.floor(Math.random() * 5);
+      var shotX = Math.floor(Math.random() * fieldSize);
+      var shotY = Math.floor(Math.random() * fieldSize);
       console.log(this.name, 'выстрелил в координаты [' + shotX + ';' + shotY + ']');
       return [shotX, shotY];
     }
   },
   spawn: function () {
-    this.currentCoordinates.x = Math.floor(Math.random() * 5);
-    this.currentCoordinates.y = Math.floor(Math.random() * 5);
+    this.currentCoordinates.x = Math.floor(Math.random() * fieldSize);
+    this.currentCoordinates.y = Math.floor(Math.random() * fieldSize);
     console.log(this.name + ' spawned at ' + this.currentCoordinates.x + ' ; ' + this.currentCoordinates.y);
   },
   checkDamage: function (x, y) {
