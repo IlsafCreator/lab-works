@@ -4,15 +4,22 @@
   "description": "",
   "main": "index.js",
   "watch": {
-    "validate-html": "index.html",
-    "validate-css": "style.css",
-    "jshint": "main.js"
+    "validate-html": {
+      "patterns": [
+        "src"
+      ],
+      "extensions": "html",
+      "quiet": true,
+      "legacyWatch": true
+    },
+    "validate-css": "src/css/styles.css",
+    "jshint": "src/"
   },
   "scripts": {
-    "server": "live-server src\\task-1\\index.html",
-    "validate-html": "html-validate src\\task-1\\index.html",
-    "validate-css": "css-validator src\\task1-1\\css\\style.css",
-    "jshint": "jshint src\\js\\script.js",
+    "server": "live-server src/task-1",
+    "validate-html": "html-validate src",
+    "validate-css": "css-validator src/task-1/css/style.css",
+    "jshint": "jshint src/",
     "watch": "npm-watch",
     "dev-mode": "npm-run-all --parallel server watch",
     "postinstall": "npm i -g live-server css-validator html-validate jshint"
