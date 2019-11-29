@@ -25,7 +25,7 @@ body {
   width: 100px;
 }
 
-.navbar .main-nav {
+.main-nav--right {
   float: right;
   margin-top: 7px;
 }
