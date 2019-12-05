@@ -6,6 +6,9 @@ function Song(songName, songLength) {
 
 function PlayerList(song) {
   this.songs = [song];
+
+
+  //перенсти переключение треков из player'а в этот блок
 }
 
 function Player(playerList) {
