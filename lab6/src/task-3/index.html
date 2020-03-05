@@ -6,25 +6,68 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
   <title>Forever alone</title>
 </head>
 
 <body>
-  <!-- <div id="chat-block"></div>
-  <div class="control-panel">
-    <input class="control-panel_input" id="textarea" placeholder="You message" />
-    <button id="control-panel_button-send" type="submit">
-      Отправить
-    </button>
-    <label>
-      <input type="checkbox" id="control-panel_user-tag" checked />You/His</label>
-  </div> -->
+
   <div class="chat">
-    <div class="chat-messages"></div>
-    <div class="control-panel"></div>
+    <div class="message-history">
+
+      <div class="message-history-block">
+        <div class="message">
+          <div class="message_author">
+            Собеседник
+          </div>
+          <div class="message_text">
+            Привет,как дела??
+          </div>
+        </div>
+      </div>
+
+      <div class="message-history-block">
+        <div class="message message--mine">
+          <div class="message_author">
+            Вы
+          </div>
+          <div class="message_text">
+            Привет,отлично!
+          </div>
+        </div>
+      </div>
+
+      <div class="message-history-block">
+        <div class="message message--mine">
+          <div class="message_author">
+            Вы
+          </div>
+          <div class="message_text">
+            Давно не общались, как жизнь?
+          </div>
+        </div>
+      </div>
+
+      <div class="message-history-block">
+        <div class="message">
+          <div class="message_author">
+            Собеседник
+          </div>
+          <div class="message_text">
+            Да вот, интерфейс чатика пилю :)
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="message-panel">
+      <div class="placeholder">Введите сообщение...</div>
+      <div class="message-panel_text-field" contenteditable="true" spellcheck="false"></div>
+      <div class="message-panel_send-btn">
+        <img src="img/send_image.png" class="send-btn" alt="Message sending button">
+      </div>
+    </div>
   </div>
-  <script src="js/simple_chat.js">
-  </script>
+  <script src="js/simple_chat.js"></script>
 </body>
 
 </html>

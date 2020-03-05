@@ -1,40 +1,51 @@
-// window.onload = function () {
-//   var btn = document.getElementById('control-panel_button-send');
-//   var txtArea = document.getElementById('textarea');
-//   var userTag = document.getElementById('control-panel_user-tag');
+'use strict';
+class ChatUI {
+  addMessage(messageTextArg, messageSender) {
+    let messageText = messageTextArg;
+    let messageHistory = document.querySelector('.message-history');
 
-//   function chatUI() {
-//     if (txtArea.value !== '') {
-//       var messageContent = txtArea.value;
-//       var chatBlock = document.getElementById('chat-block');
-//       var newMessageBlock = document.createElement('div');
-//       var textMessage = document.createElement('p');
-//       var userName = document.createElement('p');
+    if (messageText) {
+      let newMessageWrapper = document.createElement('div'),
+        newMessage = document.createElement('div'),
+        newMessageAuthor = document.createElement('div'),
+        newMessageText = document.createElement('div');
 
-//       if (userTag.checked === true) {
-//         newMessageBlock.classList.add('you-message');
-//         textMessage.classList.add('you-message_text');
-//         textMessage.append(messageContent);
+      newMessageWrapper.classList.add('message-history-block');
+      newMessage.classList.add('message');
+      newMessageAuthor.classList.add('message_author');
+      newMessageText.classList.add('message_text');
+      newMessageText.textContent = messageText;
 
-//         userName.classList.add('you-message_userName');
-//         userName.append('User - 1');
+      if (messageSender === 'user') {
+        newMessageAuthor.textContent = 'Вы';
+        newMessage.classList.add('message--mine');
+      } else {
+        newMessageAuthor.textContent = 'Собеседник';
+      }
+      newMessage.append(newMessageAuthor);
+      newMessage.append(newMessageText);
+      newMessageWrapper.append(newMessage);
+      messageHistory.append(newMessageWrapper);
+    }
+  }
+}
 
-//       } else {
-//         newMessageBlock.classList.add('interlocutor-message');
-//         textMessage.classList.add('interlocutor-message_text');
-//         textMessage.append(messageContent);
-
-//         userName.classList.add('interlocutor-message_userName');
-//         userName.append('User - 2');
-//       }
-//       chatBlock.append(newMessageBlock);
-//       newMessageBlock.append(textMessage);
-//       newMessageBlock.append(userName);
-//       txtArea.value = '';
-//     }
-//   }
-
-//   btn.onclick = function () {
-//     chatUI();
-//   };
-// };
+window.addEventListener('load', function () {
+  const chat = new ChatUI();
+  let sendButton = document.querySelector('.send-btn'),
+    inputField = document.querySelector('.message-panel_text-field'),
+    placeHolder = document.querySelector('.placeholder');
+  inputField.addEventListener('input', function (event) {
+    if (inputField.textContent !== '')
+      placeHolder.style.display = 'none';
+    else
+      placeHolder.style.display = 'block';
+  });
+  sendButton.addEventListener('click', function (event) {
+    if (inputField.textContent !== '') {
+      chat.addMessage(inputField.textContent, 'user');
+      inputField.textContent = '';
+      placeHolder.style.display = 'block';
+    }
+  });
+});

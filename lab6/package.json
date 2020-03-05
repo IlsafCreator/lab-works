@@ -16,9 +16,9 @@
     "jshint": "src/"
   },
   "scripts": {
-    "server": "live-server src/task-1",
+    "server": "live-server src/task-3",
     "validate-html": "html-validate src",
-    "validate-css": "css-validator src/task-1/css/style.css",
+    "validate-css": "css-validator src/task-3/css/style.css",
     "jshint": "jshint src/",
     "watch": "npm-watch",
     "dev-mode": "npm-run-all --parallel server watch",
