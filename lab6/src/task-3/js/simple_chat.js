@@ -1,14 +1,14 @@
 'use strict';
 class ChatUI {
   addMessage(messageTextArg, messageSender) {
-    let messageText = messageTextArg;
-    let messageHistory = document.querySelector('.message-history');
+    const messageText = messageTextArg;
+    const messageHistory = document.querySelector('.message-history');
 
     if (messageText) {
-      let newMessageWrapper = document.createElement('div'),
-        newMessage = document.createElement('div'),
-        newMessageAuthor = document.createElement('div'),
-        newMessageText = document.createElement('div');
+      const newMessageWrapper = document.createElement('div');
+      const newMessage = document.createElement('div');
+      const newMessageAuthor = document.createElement('div');
+      const newMessageText = document.createElement('div');
 
       newMessageWrapper.classList.add('message-history-block');
       newMessage.classList.add('message');
@@ -32,9 +32,9 @@ class ChatUI {
 
 window.addEventListener('load', function () {
   const chat = new ChatUI();
-  let sendButton = document.querySelector('.send-btn'),
-    inputField = document.querySelector('.message-panel_text-field'),
-    placeHolder = document.querySelector('.placeholder');
+  const sendButton = document.querySelector('.send-btn');
+  const inputField = document.querySelector('.message-panel_text-field');
+  const placeHolder = document.querySelector('.message-panel_placeholder');
   inputField.addEventListener('input', function (event) {
     if (inputField.textContent !== '')
       placeHolder.style.display = 'none';

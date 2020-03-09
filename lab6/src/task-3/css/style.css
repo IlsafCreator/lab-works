@@ -58,7 +58,7 @@ body {
   align-self: flex-end;
 }
 
-.message.message--mine>.message_text {
+.message.message--mine .message_text {
   background-color: #7e7e7e;
 }
 
@@ -67,7 +67,7 @@ body {
   align-self: flex-start;
 }
 
-.message>.message_text {
+.message .message_text {
   padding: 10px;
   border-radius: 5px;
   color: white;
@@ -99,7 +99,7 @@ body {
   word-wrap: break-word;
 }
 
-.placeholder {
+.message-panel_placeholder {
   color: #b3b3b3;
   padding: 5px;
   position: absolute;
@@ -130,4 +130,7 @@ body {
 .send-btn {
   cursor: pointer;
   height: 24px;
+  width: 24px;
+  background: url('../img/send_image.png');
+  background-size: contain;
 }
